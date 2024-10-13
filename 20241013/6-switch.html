@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch</title>
+  </head>
+  <body>
+    <script>
+      /* 多個案例中，擇一使用
+          switch (變數) {
+            case 案例A:
+                
+                break;
+            case 案例B:
+                
+                break;
+
+            default:
+                break;
+        }
+        */
+      const lang = "kr";
+
+      switch (lang) {
+        case "tw":
+          msg = "台灣";
+          break; // 破壞switch結構，中止switch後續工作
+        case "jp":
+          msg = "ko-ni-chi-wa";
+          break;
+        case "kr":
+          msg = "a-nio ha-se yo";
+          break;
+        case "en":
+          msg = "how are you？";
+          break;
+        case "hk":
+          msg = "lia ho";
+          break;
+        default:
+          msg = "unknow";
+          break;
+      }
+      console.log(msg);
+
+      const memberState = "old";
+      switch (memberState) {
+        case "new":
+          console.log("歡迎光臨~");
+          case "old":
+          console.log("需要什麼服務？");
+          break;
+      }
+    </script>
+  </body>
+</html>

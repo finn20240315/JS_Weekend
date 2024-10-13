@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+</head>
+<body>
+    <script>
+    console.log(b);
+    a=100; // 臨時變數，不該這麼做，會被老闆罵
+    var b=200; // 宣告變數，跟瀏覽器正式宣告一個變數的存在
+    var c; // 宣告變數，但是沒有定義任何值，目前讀到的值是 undefined
+
+    function test(){
+        var d=100;
+        console.log(b); // b 是一個全域變數
+        console.log(d);
+    }
+
+    test();
+
+    console.log(b);
+    // console.log(d); // 讀不到，因為 d 宣告在 function 內，只會作用在函式底下，d為區間變數
+    
+    function test2(){
+        var b=100;
+        console.log("裡面的b="+b);
+    }
+    console.log("b="+b);
+    test2();
+    console.log("b="+b);
+
+    if(true){ // if 程式區塊內不算一個區間，e 仍是一個全域變數
+        var e=100;
+        console.log(e);
+    }
+    console.log(e);
+    /*
+    var 的缺點:可重新被定義，現在多使用let、const宣告變數
+    */
+    </script>
+</body>
+</html>

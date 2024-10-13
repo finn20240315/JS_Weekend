@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let</title>
+</head>
+<body>
+    <script>
+           //////////////// let 宣告變數 /////////////////
+   
+        let a=100; // let 不能重新宣告變數a
+        a=200; // 但可以重新指定資料給變數a
+
+        if(true){
+            let a = "A" // 使用let 宣告變數，大括號{}底下的變數，則變為區域變數
+            let b="B",c="C";
+            console.log("裡面的 a = "+a);
+        }
+        console.log("外面的 a = "+a);
+        // console.log(b);
+        // console.log(c);
+console.clear;
+
+        //////////////// const 宣告常數，保護變數不被改變 /////////////////
+        const c=100; // 全域常數，常駐變數，無法重新指定資料給變數
+        // c="C";
+
+        if(true){
+            const c="C"; 
+            console.log("裡面的 c = "+c);
+        }
+        console.log("外面的 c = "+c);
+           //////////////// null vs undefined/////////////////
+      
+           let aa=null; // null 賦予一個"沒有東西"的值，的物件
+           let bb; // 沒有賦予值，就是 undefined
+           let cc=""; // 一個空字串
+           let dd= 5 * "A"; // NaN (Not a Number)，應該是一個數字，但無法用數字表達 
+           
+
+           
+    </script>
+</body>
+</html>

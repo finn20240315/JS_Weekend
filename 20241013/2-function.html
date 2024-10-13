@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <script>
+        // function 自訂函式，自訂一個函式名為hello，參數為name(可指定預設值)，執行程式:印出""good morning world"
+        // function hello (name="error"){ // 在參數裡面設置預設值"to you(字串)"
+           
+        function lastname(name){ // 在參數裡面設置預設值"to you(字串)"
+            if (name === undefined){
+            console.log("error")}
+        else{
+            console.log("good morning ,"+name);
+        }}
+        lastname("Loki"); // 呼叫名為hello的函式
+        lastname("Finn");
+        lastname("Emma");
+        lastname(); // 顯示undefined(未定義)
+console.log("///////////////////////////////////////")
+
+        word=function(){ // 將變數word指定給沒有名字的function
+            console.log(`word word word word !!`);
+        }
+        word();
+        console.log("///////////////////////////////////////")
+ 
+        say1=function(name="to you"){
+            str="hello "+name;
+            console.log(str);
+            return str;
+        }
+        say1();
+            
+        console.log("///////////////////////////////////////")
+ 
+        ////////////////簡化版//////////////
+        say2=function(name){
+            return "hello "+name;
+        }
+         console.log(say2("loki"));console.log("///////////////////////////////////////")
+ 
+       
+    </script>
+</body>
+</html>

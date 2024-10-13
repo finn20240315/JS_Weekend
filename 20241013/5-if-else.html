@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>if-else</title>
+  </head>
+  <body>
+    <script>
+      if (200 > 100) {
+        // 當()為true，會執行{}裡的程式
+        console.log("it's true");
+      } else {
+        // 當()為false，會執行{}裡的程式
+        console.log("it's false");
+      }
+      console.log("done");
+
+      a = 100;
+      if (a > 200) {
+        console.log("超過200");
+      } else if (a > 100) {
+        console.log("超過100");
+      } else {
+        console.log("100以下");
+      }
+
+      console.log("done");
+      console.log("/////////////////////////////");
+      ///////////////////////////////////////////////////
+
+      const height = 100,
+        face = false,
+        cash = 50000;
+
+      if (height > 180 && face === true && cash > 10000) {
+        console.log("高富帥,100分");
+      } else {
+        console.log("不是高富帥,0~99分");
+      }
+
+      if ((height > 180 || face === true) && cash > 10000) {
+        console.log("還算滿意,可以試著交往看看");
+      } else {
+        console.log("謝謝，我們還是當朋友就好");
+      }
+      if (30) console.log(1 + "A");
+      if ("AA") console.log(2 + "A");
+      if (0) console.log(4 + "A");
+      if (null) console.log(5 + "A");
+      if (undefined) console.log(6 + "A");
+
+      /////////////////////////////////////////////////
+
+      let day = 6; // 1~7
+      today = day;
+      if (day > 5) {
+        console.log("假日");
+      } else {
+        console.log("平日");
+      }
+
+      ////////////////////三元運算子////////////////////////
+      let msg = day > 5 ? "假日" : "平日"; // let boolean ? true-to-do-code : false-to-do-code ;
+      console.log(msg);
+    </script>
+  </body>
+</html>
