@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < 10; i++) {
+        if (i === 4) continue; // continue = pass 跳過這回合，但仍會繼續執行下一回合
+        if (i === 7) break; // break 直接中斷迴圈，也沒有下一回合
+        console.log(i);
+      }
+      // return 用在函式中的回傳值
+      function resay() {
+        console.log("hello");
+        return 0;
+        console.log("hello");
+      }
+      console.log(resay());
+
+      // 資料的布林值：0、null、undefined、空字串，都是false
+      if (!undefined) {
+        console.log("...鸚鵡");
+        // break;
+      }
+    </script>
+  </body>
+</html>

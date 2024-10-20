@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ary = [];
+
+      for (let i = 0; i < 10; i++) {
+      ary.push("A" + i * 3);
+      }
+
+      //////////////// ES5的方法 ///////////////////////
+      for (let i = 0; i < ary.length; i++) {
+      console.log(ary[i]);
+      }
+
+      /////////////// foreach method 1 ////////////////
+      function showMe(value, index) {
+      console.log("value => " + value, ", index => " + index);
+      }
+      ary.forEach(showMe); // foreach 希望你提供一個function，他會試著提供參數給你的function
+
+      /////////////// foreach method 2 ////////////////
+      function showMe(value, index) {
+      console.log("value => " + value, ", index => " + index);
+      }
+      ary.forEach(showMe);
+
+      /////////////// foreach method 3 ////////////////////
+      function showMe(value, index) {
+      console.log("value => " + value, ", index => " + index);
+      }
+      ary.forEach(showMe);
+
+
+      //////////////箭頭函式///////////
+      function showMe(value,index){
+      console.log("value => " + value, ", index => " + index);
+      }
+      aa=showMe(value,index){ // 一般函式
+      console.log("value => " + value, ", index => " + index);
+      }
+      bb=function (value,index) { // 匿名函式
+      console.log("value => " + value, ", index => " + index);
+      }
+      cc=(value,index) => { // 箭頭函式
+      console.log("value => " + value, ", index => " + index);
+      }
+
+
+
+      ////////////// array.fliter，保留的 return true，不要的 return false ///////////
+      // 對陣列移除指定元素，可以用fliter弄出新陣列再重新指定給自己
+      ary=ary.fliter((val)=>val!=="A9");
+
+
+
+      ////////////// array.map 映射，抽取每個元素特定處理，放return回原位置 ///////////
+      lokiTest = ary.map((val)=>val+"~~");
+
+      // array.find 尋找
+      // array.reduce 遍歷
+      // array.reverse 反轉
+      // array.sort 排序
+   
+    </script>
+  </body>
+</html>

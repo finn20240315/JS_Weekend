@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+                        console.log(Math.round(3.56)); // 四捨五入
+                        console.log(Math.ceil(3.2)); // 無條件進位
+                        console.log(Math.floor(3.9)); // 無條件捨去
+
+                        console.log(Math.random()); // 提供一個幅點數，介於0(包含)~1(不包含)之間的亂數
+                  */
+      /*
+                  // ex. 0 ~ 10 的隨機整數
+                  for (let i = 0; i < 10; i++) {
+                    let num = Math.random(); // 0.49129996649797425
+                    num *= 10; // 4.9129996649797425
+                    num = Math.floor(num); // 4
+                    console.log(num);
+                  }
+                  //  console.log(Math.floor(Math.random() * 0));
+            */
+
+      /*
+                  console.log("----------------------");
+
+                  for (let i = 0; i < 6; i++) {
+                    let num2 = Math.random();
+                    if (num2 < 50) {
+                      num2 *= 100;
+                      num2 = Math.floor(num2);
+                      continue;
+                      console.log(num2);
+                    }
+                  }
+            */
+      // 0~25的隨機整數
+      let num3 = Math.random();
+      num3 *= 25;
+      num3 = Math.floor(num3);
+      console.log(num3);
+
+      console.log("------------------------");
+
+      // 0~15的隨機整數
+      let num4 = Math.random();
+      num4 *= 16; // 16.99999999999
+      num4 = Math.floor(num4); // 16.99999999 無條件捨去=16
+      console.log(num4);
+
+      console.log("------------------------");
+
+      // 45~80的隨機整數，等於(0+45) ~ (35+45)的隨機整數，等於0 ~ 35的隨機整數，再加45
+      let num5 = Math.random();
+      num5 *= 36;
+      num5 = Math.floor(num5);
+      console.log(num5 + 45);
+
+      console.log("------------------------");
+
+      //
+      function rand(min, max) {
+        let rand = Math.random();
+        rand *= max - min + 1;
+        rand = Math.floor(rand);
+        return rand + min;
+      }
+
+      let randAry = [];
+      for (i = 0; i < 10; i++) {
+        randAry.push(rand(2, 105));
+      }
+      console.log(randAry);
+
+      const arr = new Array(10);
+      arr.map(() => rand(45, 80));
+      
+    </script>
+  </body>
+</html>

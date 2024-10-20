@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <script>
+      let userName = "Loki"; // value of string
+      let userAge = 12; // value of number
+
+      let myAry = ["A", true, 3]; // value of array，可以指定n個值，每個值都有自己的index索引(從0開始算)
+      console.log(myAry);
+
+      let myAryA = new Array(); // 內建的建構函式(prototype)
+      let myAryB = [];
+      let myAryC = new Array[("A", ture, 3)]();
+      // console.log(typeof(變數名稱));
+      myAryA.push("str"); // push一個資料字串"str"在陣列myAryA
+      myAryA.shift(); // 刪除陣列前面第一個資料
+      myAryA.pop(); // 刪除陣列後面的資料
+      myAryA.unshift(null); // 在陣列前面新增資料
+      // 根據 push,pop,shift,unshift 來操作陣列，增減陣列前後的長度與內容
+      // ex:myAryB.push("B",ture,3);
+      myAryB.push("B", ture, 3);
+      // 工作上不太使用 push,pop,shift,unshift 因為會有記憶體污染的問題
+      let aryInit = [1, 2, 3]; // 預設值
+      let errCloneAry = aryInit; // 預設 aryInit 因為被指定給變數
+
+      let corrCloneAry = [...aryInit]; // ES6 解構與重構陣列，將陣列拆開，再重新組合陣列，再指定給B
+
+      let a = [1, 2, 3]; // 被複製的固定陣列
+      let b = [...a]; // 重構出一個乾淨的陣列，指定給b
+      b.push("A");
+      console.log(b); // b與a是不同的陣列，他們的記憶體位置不同
+
+      let c = [...a, ...b, "loki"];
+
+      // a.push("c");
+      a = [...a, "c"];
+
+      // 巢狀陣列(二維陣列、N維陣列)
+      function hello() {
+        console.log("hello");
+      }
+      let minAry = ["A", "B", "C"];
+      let nestinAry = [hello, minAry];
+      let bigAry = [
+        ["A", "B", "C"],
+        [10, ["XX", "YY"], 30],
+      ]; // 三維陣列
+      // 呼叫陣列中的"XX" bigAry[1][1][0]
+
+      let ary1=[]
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+</head>
+<body>
+    <script>
+        let i=0; // 初始語句、設定一個初始值
+        while (i<10){ // 布林值條件判定成立
+            console.log("do",i);
+            i++; // 結束語句，使布林值有變化，才能結束迴圈
+        }
+        console.log("done");
+        /*
+        while(使用者輸入的值 !== 正規表達指定的密碼規則){
+        因情況成立，要求錯誤處理，直到密碼正確才脫離這個錯誤檢查機制
+        顯示，密碼格式不對，請重新輸入
+        操作輸入密碼的對話框
+        }
+        */
+
+        // do while
+        let j=0;
+        do {
+            console.log(j);
+        }while(j<5);
+        console.log("done");
+    </script>
+</body>
+</html>
