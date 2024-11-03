@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setInterval(()=>{
+        const now=new Date(); 
+        const diffTime=Math.floor((new Date(now.getFullYear()+1,0).getTime()-now.getTime())/1000); 
+        
+        const sec =diffTime%60;
+        const min =Math.floor(diffTime/60)%60;
+        const hour=Math.floor(diffTime/60/60)%60;
+        const day =Math.floor(diffTime/60/60/24);
+        
+        console.log("距離跨年還剩下"+day+"天"+hour+"時"+min+"分"+sec+"秒")},1000);
+
+    </script>
+</body>
+</html>

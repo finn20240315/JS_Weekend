@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date</title>
+</head>
+<body>
+    <!-- 
+        <button onclick="countdown()">倒數計時</button> 
+    -->
+    <script>
+        /*
+        const time =Date(); // 字串
+        const now=new Date(); // 時間物件
+        const lastTime1=new Date(2024,11,31,23,59,59,999);
+        const lastTime2=new Date("2024-12-31T23:59:59.999"); // 用ISO表示法指定為字串
+
+        // console.log(time);
+        // console.log(now);
+        // console.log(lastTime1);
+        // console.log(lastTime2);
+
+
+        const monthStr=["壹","貳","參","肆","伍","陸","柒","捌","玖","拾","拾壹","拾貳"];
+        const dayStr=["星期柒","星期壹","星期貳","星期參","星期肆","星期伍","星期陸"]
+       
+        let ans=null;
+        ans=now.getFullYear(); // 抓到現在的年份(西元年)
+        ans1=monthStr[now.getMonth()]; // [0]~[11]，抓到現在的月份
+        ans=now.getDate();
+        ans=now.getHours();
+        ans=now.getMinutes();
+        ans=now.getSeconds();
+        ans=now.getMilliseconds();
+        ans2=dayStr[now.getDay()];  // [0]~[6]，抓到現在的星期
+        ans=now.getTime(); // 時間戳記，單位是毫秒，將所有的時間換算成總毫秒
+
+
+        // console.log(ans);
+        // console.log(ans1);
+        // console.log(ans2);
+
+        // function countdown(){  
+    
+        // Q:製作一個按鈕，按下之後可以動態更新並印在畫面上
+        // 計算跨年倒數日時分秒
+        let diffTime=lastTime1.getTime()-now.getTime(); // 單位:毫秒
+        diffTime=Math.floor(diffTime/1000); // 單位:秒
+        // console.log(diffTime);
+        
+        let sec =diffTime;
+        let dd=0, hh=1,mm=10,ss=15;
+        let min=Math.floor(sec/60);  // 設定min為sec/60之後四捨五入的結果
+        sec=sec%60 // 重新設定sec為sec除以60取餘數的結果
+        // console.log(min+"分"+sec+"秒");
+        let hour=Math.floor(min/60);  // 設定hour為min/60之後四捨五入的結果
+        min=min%60 // 重新設定min為min除以60取餘數的結果
+        // console.log(hour+"時"+min+"分"+sec+"秒");
+        let day=Math.floor(hour/24);  // 設定day為hour/24之後四捨五入的結果
+        hour=hour%24 // 重新設定hour為hour除以24取餘數的結果
+        console.log("距離跨年還剩下"+day+"天"+hour+"時"+min+"分"+sec+"秒");
+// };
+        // console.log(min+"分"+sec+"秒");
+
+        */
+
+        const nowTime= new Date();
+        nowTime.getTime
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+   <h1 id="loki" title="is header element"> hello world</h1>
+   <img src="https://picsum.photos/300/200/?random=10" class="myImg"/>
+   <ul id="demo">
+        <li class="list">item1</li>
+        <li class="list hot">item2</li>
+        <li class="list">item3</li>
+        <li class="list">item4</li>
+    </ul>
+
+   <form >
+        <input type="text" name="userName">
+        <input type="submit" value="submit">
+   </form>
+   <form >
+        <input type="text">
+        <input type="submit" value="submit">
+    </form>
+
+   <script>
+    onload=function(){
+    const getWord=document.getElementById("demo").innerHTML;
+    document.getElementById("loki").innerHTML="welcome";
+    console.log(getWord);}
+    setTimeout(onload,3000);
+
+    document.getElementsByClassName("list")
+    document.getElementsByTagName("h1")
+    document.querySelector("#loki")
+    document.querySelector(".list")  // 選擇第一個 class="list" 的標籤
+    document.querySelectorAll(".list") // 全選所有 class="list" 的標籤
+    document.querySelector("h1")
+    document.querySelector("img")
+    document.querySelector("#demo>li.hot")
+   </script>
+</body>
+</html>

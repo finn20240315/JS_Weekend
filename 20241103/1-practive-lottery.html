@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practive lottery</title>
+</head>
+<body>
+    <script>
+        // exam 產生6個數字(不重複) 1~49
+        let lottoPool =[]; // 樂透球池陣列
+        const getBall =[]; // 選中的球池陣列
+
+        for(let i=0;i<50;i++){  // 初始化樂透球池 (1)~(49)
+            lottoPool.push("幸運球 "+i);
+        }
+
+        function rand(min, max) {  // 產生隨機整數的機器
+          let rand = Math.random();
+          rand *= max - min + 1;
+          rand = Math.floor(rand);
+          return rand + min;
+        }
+
+      const findIdx=rand(0,48);  // 用產生隨機整出的機器，抽出第一個球的序號
+     // console.log(lottoPool[firstIndex]); // (10)
+     const findBall=lottoPool[findIdx]; // 用抽出的第一顆球的序號，在樂透球池中找出對應的值
+     getBall.push(findBall);  // 把選中的球的序號對應的值，放進選中的球池陣列
+
+      lottoPool=lottoPool.filter(function(checkBall){  // 用"陣列.filter()"將選中的球從樂透球池中去除
+        return checkBall !== findBall;                // return的值為true or false，true就保留數值，false就去除
+      });
+console.log(getBall.sort());
+
+// 共6抽
+let lottoPool2 =[]; // 樂透球池
+        const getBall2 =[]; // 選中的球池
+
+        for(let i=0;i<50;i++){  // 初始化球池 (1)~(49)
+            lottoPool2.push("幸運球 "+i);
+        }
+
+for (let i=1;i<7;i++){
+    const findIdx2=rand(0,lottoPool2.length-1);  // 隨機從lottoPool2球池中抽出選中的球
+    const findBall2=lottoPool2[findIdx2];
+
+    getBall2.push(findBall2);
+
+    lottoPool2 = lottoPool2.filter(function(checkBall2){
+        return checkBall2 !== findBall2;
+    });
+}
+
+console.log(getBall2.sort());
+
+/*
+// 方法2
+luckyPool=[];
+
+for(let i=0;i<6;i++){
+    for(let i=0;i<6;i++){
+      lottoMachine[i]=String(i+1).padStart(2,"0");
+      const findIdx3=rand(0,lottoMachine.length-1);
+      
+      luckyPool.push(lottoMachine)
+    }
+    
+}
+    */
+    </script>
+</body>
+</html>
